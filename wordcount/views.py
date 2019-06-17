@@ -23,6 +23,10 @@ def count(request):
             
     
     print(result)
-    result = sorted(result.items(),key=lambda x:x[1], revserse=True)
+    result = sorted(result.items(),key=lambda x:x[1], reverse=True)
     
-    return render(request,'count.html',{'count_result':result.items()})
+    return render(request,'count.html',{'count_result':result})
+
+def about(resquest):
+    return render(resquest,'about.html')
+    
